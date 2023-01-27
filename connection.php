@@ -1,7 +1,7 @@
 <?php
 
 $servername = "localhost";
-$username = "pma";
+$username = "root";
 $password = "";
 
 
