@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="logo">
-        <i class="fa-solid fa-book"></i>
+        <i class="fa-solid fa-3x fa-book"></i>
         <h1>FemCoders Library</h1>
     </div>
     <div class="mobile-container">
