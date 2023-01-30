@@ -1,3 +1,21 @@
-@import url(./main.css);
-@import url(./bookdetails.css);
-@import url(./form.css);
+@import '/styles/main.css';
+@import '/styles/bookdetails.css';
+@import '/styles/form.css';
+
+* {
+    width: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --card: #EFC6A1; 
+    --header: #F49338;
+    --background-color: #F0EBE5;
+    --search: #FFF3E6;
+}
+body {  
+    height: 100vh;
+    width: 100%;
+    font-size: 62.5%;
+    background-color: var(--background-color);
+}

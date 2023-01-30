@@ -1,0 +1,118 @@
+@import '/styles/styles.css';
+
+@media (max-width: 320px) {
+    .logo {
+        display: flex;
+        padding: 1.5rem 8rem;
+        background-color: #F49338;
+    }
+
+    h1 {
+        inline-size: 3rem;
+        font-size: 1rem;
+        margin-top: -1rem;
+        margin-left: 0.6rem;
+    }
+    .fa-solid {
+        margin-left: -7rem;
+        margin-top: -0.9rem;
+        width: 1rem;
+        height: 1rem;
+
+    }
+    .mobile-container a {
+        display: block;
+        padding: 0.2rem 0.5rem;
+        text-decoration: none;
+        color: black;
+        text-shadow: 0.0625rem black;
+    }
+    .myLinks {
+        text-align: right;
+    }
+    .mobile-container input[type="checkbox"], .mobile-container .fa-bars, .mobile-container .fa-times {
+        position: absolute;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        right: 0;
+        top: -3.5rem;
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .mobile-container .fa-bars, .mobile-container .fa-times {
+        font-size: 2rem;
+        pointer-events: none;
+    }
+    .mobile-container input[type="checkbox"] {
+        opacity: 0;
+    }
+    .mobile-container {
+        color: black;
+        position: relative;
+        background: white;
+       
+       
+    }
+    .mobile-container .myLinks {
+        display: none;
+
+    }
+    .mobile-container input:checked ~ .myLinks {
+        display: block;
+    }
+    .mobile-container input:checked ~ .fa-bars {
+        display: none;
+    }
+    .mobile-container input:not(:checked) ~ .fa-times {
+        display: none;
+    }
+    
+    
+}
+
+/*.respmenu input[type="checkbox"], .respmenu .fa-bars, .respmenu .fa-times {
+    position: absolute;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    right: 0;
+    top: 0;
+    width: 48px;
+    height: 48px;
+  }
+  
+  .respmenu .fa-bars, .respmenu .fa-times {
+    font-size: 48px;
+    pointer-events: none;
+  }
+  
+  .respmenu input[type="checkbox"] {
+    opacity: 0;
+  }
+  
+  .respmenu {
+    color: white;
+    position: relative;
+    background: #123456;
+    min-height: 48px;
+  }
+  
+  .respmenu nav {
+    display: none;
+  }
+  
+  .respmenu input:checked ~ nav {
+    display: block;
+  }
+  
+  .respmenu input:checked ~ .fa-bars {
+    display: none;
+  }
+  
+  .respmenu input:not(:checked) ~ .fa-times {
+    display: none;
+  }
+  
+  
