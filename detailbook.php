@@ -29,9 +29,7 @@ if($stmt->execute()){
 
     echo "Author: " . $row->author. "Title: " . $row->title. "ISBN: " . $row->isbn. "Description: " . $row->description. "Book cover: " . "<br>";
     echo '<img src="data:image/jpeg;base64,'.base64_encode( $row->img) .'" />';
-    //echo ' <img class = "icon" src="./images/trash-can-solid.svg" alt= "delete"/>';
-   // echo '<a href="./delete.php?isbn='.$row["isbn"].'"> <img class = "icon" src="./images/trash-can-solid.svg" alt= "delete"/> </a>';
-   /* <a href="delete.php?id=<?php echo $row['cod_estudiante'] ?>" class="btn btn-danger">Eliminar</a>;*/
+    
 }
 else{
     echo $connection->error;
@@ -51,8 +49,11 @@ echo "Author: " . $row["author"]. "Title: " . $row["title"]. "ISBN: " . $row["is
 mysqli_close($conn);
 ?>
 
-    <img class = "icon" src="./images/pen-to-square-solid.svg" alt= "edit"/>
-   <a href="delete.php?isbn=<?php echo $row["isbn"] ?>" >
+    <a href="addbook.php?isbn=<?php echo $row->isbn ?> ">
+        <img class = "icon" src="./images/pen-to-square-solid.svg" alt= "edit"/>
+    </a>
+
+    <a href="delete.php?isbn=<?php echo $row->isbn ?> ">
     <img class = "icon" src="./images/trash-can-solid.svg" alt= "delete"/></a>
 
 </body>
