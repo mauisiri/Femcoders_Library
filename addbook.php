@@ -7,7 +7,7 @@
     <title>FemCoders Library</title>
 </head>
 <body>
-    <form action="form.php" method="post" enctype="multipart/form-data"><br>
+    <form action="" method="post" enctype="multipart/form-data"><br>
 
            <label for="author">Author:</label>
            <input type="text" name="author" required/> <br><br>
@@ -29,36 +29,35 @@
 
 <?php
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "femcoders_library";
+if ($_POST)
+{
+include("connection.php");
 
-
-// Create connection
-$conn =  mysqli_connect($servername, $username, $password,$dbname);
-
-// Check connection
-if ($conn->connect_error) {
-      die("Connection failed: " . $conn->connect_error);
-      }
-      echo "Connected successfully";
-
-
-      
 $author = $_POST['author'];
 $title = $_POST['title'];
 $isbn = $_POST['isbn'];
 $description = $_POST['description'];
-$bookcover = $_FILES['bookcover']['tmp_name'];
-echo $author;
+$bookcover = file_get_contents($_FILES['bookcover']['tmp_name']);
+
+$sql = "INSERT INTO books (author, title, isbn, description, img) VALUES (?,?,?,?,?)";
+
+$stmt= $conn->prepare($sql);
+
+$stmt->bind_param("sssss", $author, $title, $isbn, $description, $bookcover);
+
+if ($stmt->execute()) {
+    echo "New record created successfully";
+   } else {
+    echo "Unable to create record";
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
 
 
-$sql = "INSERT INTO books (author, title, isbn, description, img )VALUES('$author', '$title', '$isbn', '$description', '$bookcover')";
+/* $sql = "INSERT INTO books (author, title, isbn, description, img )VALUES('$author', '$title', '$isbn', '$description', '$bookcover')";
 if (mysqli_query($conn, $sql)) {
     echo 'new record created succesfully';
 }  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-mysqli_close($conn);
+mysqli_close($conn); */
 
 
 
@@ -81,6 +80,10 @@ mysqli_close($conn);
 //         print_r($arrayImagen);
 //         echo '<br/>';
 //     }
+
+$stmt->close();
+$conn->close();
+}
 ?>
 </body>
 </html>
