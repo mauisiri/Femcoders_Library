@@ -35,7 +35,7 @@
         <input type="text" name="isbn" required/><br><br>
            
         <label for="description">Description:</label>
-        <textarea name="descripcion" rows="10" cols="25"></textarea>
+        <textarea name="description" rows="10" cols="25"></textarea>
         <div class="file">
             <label for ="bookcover">Book cover:</label><br>
             <input type="file" key="bookcover" name="bookcover" id="bookcover" value="30000" /><br><br>
