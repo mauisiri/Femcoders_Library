@@ -24,8 +24,17 @@
             </a>
         </div>
     </div>
+<div class ="search-container">
+  <form action="search.php" method="GET">
+	  <input type="text" name="query" />
+	  <input type="submit" value="Search" id="search-button" />
+  </form>
+</div>
+
+
     <?php
 include("connection.php");
+
 
 //$sql = "SELECT author, title, isbn, description, img FROM books";
 $sql = "SELECT isbn, author, title, img FROM books";
@@ -44,6 +53,8 @@ if (mysqli_num_rows($result) > 0) {
 }
 
 mysqli_close($conn);
+
+
 ?>
 
 <script src="https://kit.fontawesome.com/27198e3231.js" crossorigin="anonymous"></script>
