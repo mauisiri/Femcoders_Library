@@ -45,7 +45,7 @@ $row=mysqli_fetch_array($query);
         <input type="text" name="isbn" value= "<?php echo $row['isbn']?>"required/> <br><br>
            
         <label for="description">Description:</label>
-        <textarea name="description" rows="10" cols="25" value= "<?php echo $row['description']?>"required> </textarea>
+        <textarea name="description" rows="10" cols="25" required> <?php echo $row['description']?></textarea>
         <div class="file">
             <label for ="bookcover">Book cover:</label><br>
             <input type="file" key="bookcover" name="bookcover" id="bookcover" value ="<?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $row['img']) .'" />'?>"/> <br><br>
