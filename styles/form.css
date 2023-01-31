@@ -1,4 +1,6 @@
-@media (max-width: 320px) {
+@import './styles.css';
+
+@media (max-width: 576px) {
     body {
         margin: 0;
     }
@@ -71,5 +73,7 @@
         display: none;
     }
     
-    
+    label {
+        color: red;
+    }
 }
