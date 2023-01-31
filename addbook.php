@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/form.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>FemCoders Library</title>
 </head>
@@ -25,24 +25,26 @@
         </div>
     </div>
     <form action="" method="post" enctype="multipart/form-data"><br>
+        <label for="author">Author:</label>
+        <input type="text" name="author" required/> <br><br>
+           
+        <label for="title">Title:</label>
+        <input type="text" name="title" required/><br><br>
+           
+        <label for="isbn">ISBN:</label>
+        <input type="text" name="isbn" required/><br><br>
+           
+        <label for="description">Description:</label>
+        <textarea name="description" rows="10" cols="25"></textarea>
+        <div class="file">
+            <label for ="bookcover">Book cover:</label><br>
+            <input type="file" key="bookcover" name="bookcover" id="bookcover" value="30000" /><br><br>
+        </div> 
+        
+        <input class="button" type= "submit" id ="submit" name="submit" value="SUBMIT" />
+    </form>
+   
 
-           <label for="author">Author:</label>
-           <input type="text" name="author" required/> <br><br>
-           
-           <label for="title">Title:</label>
-           <input type="text" name="title" required/><br><br>
-           
-           <label for="isbn">ISBN:</label>
-           <input type="text" name="isbn" required/><br><br>
-           
-           <label for="description">Description:</label>
-           <input type="text" name="description" required/><br><br>
-
-           <label for ="bookcover">Book cover:</label><br>
-           <input type="file" key="bookcover" name="bookcover" id="bookcover" value="30000" /><br><br> 
-           
-           <input type= "submit" id ="submit" name="submit" value="Submit" />
-        </form>
 
 <?php
 

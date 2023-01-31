@@ -1,12 +1,7 @@
-@import '/styles/main.css';
-@import '/styles/bookdetails.css';
-@import '/styles/form.css';
+@import './bookdetails.css';
+@import './form.css';
 
-* {
-    width: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 :root {
     --card: #EFC6A1; 
     --header: #F49338;

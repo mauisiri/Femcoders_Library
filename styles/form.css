@@ -1,6 +1,9 @@
-@media (max-width: 320px) {
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@0,200;1,200;1,300&display=swap');
+
+@media (max-width: 576px) {
     body {
         margin: 0;
+        background-color: #F0EBE5;
     }
     .logo {
         display: flex;
@@ -13,6 +16,7 @@
         font-size: 1.3rem;
         margin-top: -0.1rem;
         margin-left: 0.7rem;
+        font-family: 'Abril+Fatface';
     }
     .fa-solid {
         margin-left: -7rem;
@@ -71,5 +75,35 @@
         display: none;
     }
     
-    
+    form {
+        justify-content: center;
+        text-align: center;
+    }
+    label {
+        font-size: 1rem;
+        /*margin-left: 1rem;*/
+        margin-top: 1rem;
+        font-family: 'Poppins';
+    }
+
+    input {
+        border-radius: 1rem;
+        padding: 0.4rem 0.5rem;
+        font-size: 1rem;
+        border: none;
+    }
+    textarea {
+        font-size: 1rem;
+        border-radius: 1rem;
+        margin-left: 1.8rem;
+    }
+    .button {
+        background-color: #EFC6A1;
+        /*margin-left: 6rem;*/
+        padding: 0.4rem 2rem;
+        border: none;
+    }
+    .file {
+        padding: 0;
+    }
 }
