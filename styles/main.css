@@ -70,6 +70,12 @@
     .mobile-container input:not(:checked) ~ .fa-times {
         display: none;
     }
+
+    .img {
+        justify-content: center;
+        align-content: center;
+        width: 16rem;
+    }
      
 }
 
