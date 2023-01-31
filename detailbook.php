@@ -1,3 +1,13 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>FemCoders Library</title>
+</head>
+<body>
+
 <?php
  include("connection.php");
 
@@ -19,6 +29,7 @@ if($stmt->execute()){
 
     echo "Author: " . $row->author. "Title: " . $row->title. "ISBN: " . $row->isbn. "Description: " . $row->description. "Book cover: " . "<br>";
     echo '<img src="data:image/jpeg;base64,'.base64_encode( $row->img) .'" />';
+    
 }
 else{
     echo $connection->error;
@@ -37,3 +48,13 @@ echo "Author: " . $row["author"]. "Title: " . $row["title"]. "ISBN: " . $row["is
  */
 mysqli_close($conn);
 ?>
+
+    <a href="addbook.php?isbn=<?php echo $row->isbn ?> ">
+        <img class = "icon" src="./images/pen-to-square-solid.svg" alt= "edit"/>
+    </a>
+
+    <a href="delete.php?isbn=<?php echo $row->isbn ?> ">
+    <img class = "icon" src="./images/trash-can-solid.svg" alt= "delete"/></a>
+
+</body>
+</html>
