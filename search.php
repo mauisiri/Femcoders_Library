@@ -8,18 +8,7 @@
     <title>FemCoders Library</title>
 </head>
 <body>
-    <div class="logo">
-        <i class="fa-solid fa-3x fa-book"></i>
-        <h1>FemCoders Library</h1>
-    </div>
-    <div class="mobile-container">
-        <input type="checkbox">
-        <i class="fa fa-bars"></i>
-        <i class="fa fa-times"></i>
-        <div class="myLinks">
-          <a href="./main.php">Home</a>
-          <a href="./addbook.php">Add Books</a>
-        </div>
+
 <?php
 
 include("connection.php");

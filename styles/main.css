@@ -76,7 +76,13 @@
         align-content: center;
         width: 16rem;
     }
-     
+     .search-container {
+
+        background-color: red;
+     }
+    #search-button {
+        border-radius: 30px;
+    }
 }
 
 @media screen and (min-width: 600px){
