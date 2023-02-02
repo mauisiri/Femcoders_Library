@@ -22,10 +22,10 @@
         </div>
             
     </div>
-<div class ="search-container">
+    <div class="search-container">
   <form action="search.php" method="GET">
-	  <input type="text" name="query" placeholder="Search by author or title..."/>
-	  <input type="submit" value="Search" id="search-button" />
+    <input type="text" name="query" placeholder="Search by author or title..." class="search-input"/>
+    <button type="submit" value="Search" class="search-button" > <img class = "search-icon" src="./images/searchicon.svg" alt= "search"/></button>
   </form>
 </div>
 
