@@ -18,7 +18,7 @@ $row=mysqli_fetch_array($query);
     <title>FemCoders Library</title>
 </head>
 <body>
-<div class="logo">
+<div id="header">
         <i class="fa-solid fa-3x fa-book"></i>
         <h1>FemCoders Library</h1>
     </div>
