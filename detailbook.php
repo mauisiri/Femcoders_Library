@@ -19,10 +19,7 @@
         <div class="myLinks">
           <a href="./main.php">Home</a>
           <a href="./addbook.php">Add Books</a>
-        </div>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            </a>
-        </div>
+      
     </div>
 
 <?php

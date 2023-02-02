@@ -48,7 +48,7 @@ $row=mysqli_fetch_array($query);
         <textarea name="description" rows="10" cols="25" required> <?php echo $row['description']?></textarea>
         <div class="file">
             <label for ="bookcover">Book cover:</label><br>
-            <input type="file" key="bookcover" name="bookcover" id="bookcover"/> <br><br>
+            <input type="file" name="bookcover" id="bookcover"/> <br><br>
         </div> 
         
         <input class="button" type= "submit" id ="submit" name="submit" value="EDIT" />
