@@ -24,7 +24,7 @@
             </a>
         </div>
     </div>
-<div class ="search-container">
+<div class="search-container">
   <form action="search.php" method="GET">
 	  <input type="text" name="query" placeholder="Search by author or title..."/>
 	  <input type="submit" value="Search" class="search-button" />
