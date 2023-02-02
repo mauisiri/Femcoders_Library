@@ -8,26 +8,23 @@
     <title>FemCoders Library</title>
 </head>
 <body>
-    <div class="logo">
+    <div id="header">
         <i class="fa-solid fa-3x fa-book"></i>
         <h1>FemCoders Library</h1>
     </div>
     <div class="mobile-container">
-        <input type="checkbox">
+        <input type="checkbox"/>
         <i class="fa fa-bars"></i>
         <i class="fa fa-times"></i>
         <div class="myLinks">
           <a href="./main.php">Home</a>
           <a href="./addbook.php">Add Books</a>
         </div>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            </a>
-        </div>
     </div>
 <div class="search-container">
   <form action="search.php" method="GET">
-	  <input type="text" name="query" placeholder="Search by author or title..."/>
-	  <input type="submit" value="Search" class="search-button" />
+	  <input type="text" name="query" placeholder="Search by author or title..." class="search-input"/>
+	  <button type="submit" value="Search" class="search-button" > <img class = "search-icon" src="./images/searchicon.svg" alt= "search"/></button>
   </form>
 </div>
 

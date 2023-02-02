@@ -2,7 +2,7 @@
     body {
         margin: 0;
     }
-    .logo {
+    #header {
         display: flex;
         padding: 0.6rem 8rem;
         background-color: #F49338;
@@ -77,7 +77,7 @@
 width: 2%;
 }*/
 
-.logo {
+#header {
     display: flex;
     padding: 0.6rem 8rem;
     background-color: #F49338;
