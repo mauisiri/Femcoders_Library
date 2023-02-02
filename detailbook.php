@@ -66,7 +66,7 @@ echo "Author: " . $row["author"]. "Title: " . $row["title"]. "ISBN: " . $row["is
 mysqli_close($conn);
 ?>
 
-    <a href="addbook.php?isbn=<?php echo $row->isbn ?> ">
+    <a href="updatebook.php?isbn=<?php echo $row->isbn ?> ">
         <img class = "icon" src="./images/pen-to-square-solid.svg" alt= "edit"/>
     </a>
 
