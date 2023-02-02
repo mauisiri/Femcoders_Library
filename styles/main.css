@@ -77,11 +77,13 @@
         width: 16rem;
     }
      .search-container {
-
-        background-color: red;
+        height: 5rem;
+        background-image: url("../images/searchimg.jpeg");
      }
     #search-button {
         border-radius: 30px;
+        background-color: red;
+        font-family: "Poppins", sans-serif;
     }
 }
 
