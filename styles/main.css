@@ -1,4 +1,8 @@
-@media (max-width: 576px) {
+.search-button{
+    background-color: violet;
+}
+
+@media (min-width: 576px) {
     body {
         margin: 0;
     }
@@ -80,18 +84,16 @@
         height: 5rem;
         background-image: url("../images/searchimg.jpeg");
      }
-    #search-button {
+    .search-button {
         border-radius: 30px;
-        background-color: green;
+        background-color: red;
         font-family: "Poppins", sans-serif;
     }
 }
 
-@media screen and (min-width: 600px){
-    body {
-        margin: 0;
-        
-    }
+@media screen and (max-width: 600px) {
+    
+
     .logo {
         display: flex;
         padding: 0.6rem 8rem;
@@ -170,9 +172,9 @@
         height: 5rem;
         background-image: url("../images/searchimg.jpeg");
      }
-    #search-button {
+    .search-button {
         border-radius: 30px;
-        background-color: red;
+        background-color: yellow;
         font-family: "Poppins", sans-serif;
     }
 
