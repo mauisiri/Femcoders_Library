@@ -4,7 +4,7 @@
         margin: 0;
         background-color: #F0EBE5;
     }
-    .logo {
+    #header {
         display: flex;
         padding: 0.6rem 8rem;
         background-color: #F49338;
@@ -108,10 +108,10 @@
 }
 
 @media screen and (min-width: 600px) {
-.logo {
+#header {
     display: flex;
     padding: 0.6rem 8rem;
-    background-color: red;
+    background-color: var(--header);
 }
 
 h1 {
