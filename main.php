@@ -41,10 +41,22 @@ $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {
   // output data of each row
   while($row = mysqli_fetch_assoc($result)) {
-    $itemDetail =  "Author: ".$row["author"]."Title: ".$row["title"]."ISBN: ".$row["isbn"]."</br>";
-    echo $itemDetail;
+    //$itemDetail =  "Author: ".$row["author"]."Title: ".$row["title"]."</br>";
+    //echo $itemDetail;
+   
 //    echo "Author: " . $row["author"]. "Title: " . $row["title"]. "ISBN: " . $row["isbn"]. "Description: " . $row//["description"]. "Book cover: " . "<br>";
-    echo '<a href="./bookdetails.php?isbn='.$row["isbn"].'"> <img class="img" src="data:image/jpeg;base64,'.base64_encode( $row["img"]) .'" /></a></br>';
+    //echo '<a href="./detailbook.php?isbn='.$row["isbn"].'"> <img class="img" src="data:image/jpeg;base64,'.base64_encode( $row["img"]) .'" /></a></br>';
+
+    ?>
+<div class="container">
+  <?php echo '<a href="./bookdetails.php?isbn='.$row["isbn"].'"> <img class="img" src="data:image/jpeg;base64,'.base64_encode( $row["img"]) .'" /></a></br>'?>
+  <?php echo $row['author']?>
+  <?php echo $row['title']?>
+  </div>
+
+<?php
+
+
   }
 } else {
   echo "0 results";
