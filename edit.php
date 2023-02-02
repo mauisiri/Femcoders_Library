@@ -6,12 +6,9 @@ $isbn=$_POST['isbn'];
 $author=$_POST['author'];
 $title=$_POST['title'];
 $description = $_POST['description'];
-$bookcover = $_FILES['bookcover']['tmp_name'];
-if(!empty($bookcover)) {
-    move_uploaded_file($bookcover);
-}
+$bookcover = addslashes(file_get_contents($_FILES['bookcover']['tmp_name']));
 
-$sql="UPDATE books SET  title='$title', author='$author',description='$description' WHERE isbn='$isbn'";
+$sql="UPDATE books SET  title='$title', author='$author',description='$description', img='$bookcover' WHERE isbn='$isbn'";
 $query=mysqli_query($conn,$sql);
 
     if($query){
