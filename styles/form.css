@@ -115,6 +115,7 @@
 }
 
 h1 {
+    color: red;
     inline-size: 3rem;
     font-size: 1.3rem;
     margin-top: -0.1rem;
