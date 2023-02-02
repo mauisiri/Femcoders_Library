@@ -1,9 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@0,200;1,200;1,300&display=swap');
-@import './main.css';
 @import './bookdetails.css';
 @import './form.css';
-
-
+@import './main.css';
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@0,200;1,200;1,300&display=swap');
 
 :root {
     --card: #EFC6A1; 
