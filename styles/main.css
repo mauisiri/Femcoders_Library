@@ -2,7 +2,7 @@
     body {
         margin: 0;
     }
-    .logo {
+    #header {
         display: flex;
         padding: 0.6rem 8rem;
         background-color: #F49338;
@@ -80,10 +80,27 @@
         height: 5rem;
         background-image: url("../images/searchimg.jpeg");
      }
-    #search-button {
-        border-radius: 30px;
-        background-color: red;
+   
+     .search-icon {
+        width: 0.8rem;
+        height: auto;
+        background-color: var(--search);
+     }
+     .search-input {
         font-family: "Poppins", sans-serif;
+        background-color: var(--search);
+        margin-left: 1rem;
+        font-size: 0.8rem;
+        width: 15rem;
+       
+     }
+    .search-button {
+        border-radius: 30px;
+        background-color: var(--search);
+        border: none;
+        height: 2rem;
+        width: 5rem;
+      
     }
 }
 

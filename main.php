@@ -8,7 +8,7 @@
     <title>FemCoders Library</title>
 </head>
 <body>
-    <div class="logo">
+<div id="header">
         <i class="fa-solid fa-3x fa-book"></i>
         <h1>FemCoders Library</h1>
     </div>
@@ -20,9 +20,7 @@
           <a href="./main.php">Home</a>
           <a href="./addbook.php">Add Books</a>
         </div>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            </a>
-        </div>
+            
     </div>
 <div class ="search-container">
   <form action="search.php" method="GET">
