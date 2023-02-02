@@ -75,10 +75,22 @@
         display: none;
     }
 
+    
+
     .img {
-        justify-content: center;
-        align-content: center;
         width: 16rem;
+    }
+
+    .container {
+        font-family: 'poppins';
+        font-size: 1rem;
+        text-align: center;
+        background-color: #EFC6A1;
+        margin-top: 1rem;
+        padding: 0.5rem 0;
+        width: 90%;
+        margin: 1rem auto;
+        
     }
      .search-container {
         height: 5rem;
@@ -123,6 +135,7 @@
         text-align: right;
         font-size: 1.3rem;
         
+        
     }
     .mobile-container input[type="checkbox"], .mobile-container .fa-bars, .mobile-container .fa-times {
         position: absolute;
@@ -133,6 +146,7 @@
         top: -4rem;
         width: 3rem;
         height: 3rem;
+       
     }
 
     .mobile-container .fa-bars, .mobile-container .fa-times {
