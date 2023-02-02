@@ -66,12 +66,14 @@ echo "Author: " . $row["author"]. "Title: " . $row["title"]. "ISBN: " . $row["is
 mysqli_close($conn);
 ?>
 
+<div class="delete">
     <a href="updatebook.php?isbn=<?php echo $row->isbn ?> ">
         <img class = "icon" src="./images/pen-to-square-solid.svg" alt= "edit"/>
     </a>
 
     <a href="delete.php?isbn=<?php echo $row->isbn ?> ">
     <img class = "icon" src="./images/trash-can-solid.svg" alt= "delete"/></a>
+</div>
     <script src="https://kit.fontawesome.com/27198e3231.js" crossorigin="anonymous"></script>
 </body>
 </html>
