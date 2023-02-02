@@ -18,7 +18,7 @@ $row=mysqli_fetch_array($query);
     <title>FemCoders Library</title>
 </head>
 <body>
-<div class="logo">
+<div id="header">
         <i class="fa-solid fa-3x fa-book"></i>
         <h1>FemCoders Library</h1>
     </div>
@@ -29,9 +29,6 @@ $row=mysqli_fetch_array($query);
         <div class="myLinks">
           <a href="./main.php">Home</a>
           <a href="./addbook.php">Add Books</a>
-        </div>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            </a>
         </div>
     </div>
     <form action="edit.php" method="post" enctype="multipart/form-data"><br>

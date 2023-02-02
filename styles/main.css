@@ -1,16 +1,13 @@
-.search-button{
-    background-color: violet;
-}
-
 @media (max-width: 576px) {
     body {
         margin: 0;
     }
-    .logo {
+    #header {
         display: flex;
         padding: 0.6rem 8rem;
-        background-color: red;
+        background-color: var(--header);
     }
+
 
     h1 {
         inline-size: 3rem;
@@ -21,9 +18,9 @@
     .fa-solid {
         margin-left: -7rem;
         margin-top: -0.1rem;
-        
+       
     }
-    
+   
     .mobile-container a {
         display: block;
         padding: 0.2rem 0.5rem;
@@ -34,7 +31,7 @@
     .myLinks {
         text-align: right;
         font-size: 1.3rem;
-        
+       
     }
     .mobile-container input[type="checkbox"], .mobile-container .fa-bars, .mobile-container .fa-times {
         position: absolute;
@@ -47,6 +44,7 @@
         height: 3rem;
     }
 
+
     .mobile-container .fa-bars, .mobile-container .fa-times {
         font-size: 2rem;
         pointer-events: none;
@@ -57,12 +55,13 @@
     .mobile-container {
         color: black;
         position: relative;
-        background: white;
+        background: var(--search);
        
        
     }
     .mobile-container .myLinks {
         display: none;
+
 
     }
     .mobile-container input:checked ~ .myLinks {
@@ -75,30 +74,68 @@
         display: none;
     }
 
+    
+
     .img {
-        justify-content: center;
-        align-content: center;
         width: 16rem;
+    }
+
+    .container {
+        font-family: 'poppins';
+        font-size: 1rem;
+        text-align: center;
+        background-color: #EFC6A1;
+        margin-top: 1rem;
+        padding: 0.5rem 0;
+        width: 90%;
+        margin: 1rem auto;
+        
     }
      .search-container {
         height: 5rem;
         background-image: url("../images/searchimg.jpeg");
+        background-size: 500px;
+        display: flex;
+        align-items: center;
+     }
+   
+     .search-icon {
+        width: 0.8rem;
+        height: auto;
+        background-color: var(--search);
+     }
+     .search-input {
+        font-family: "Poppins", sans-serif;
+        background-color: var(--search);
+        margin-left: 1rem;
+        font-size: 0.8rem;
+        width: 15rem;
+       
      }
     .search-button {
         border-radius: 30px;
-        background-color: red;
-        font-family: "Poppins", sans-serif;
+        background-color: var(--search);
+        border: none;
+        height: 2rem;
+        width: 3rem;
+     
     }
 }
+
 
 @media screen and (min-width: 600px) {
-    
+   
 
-    .logo {
+
+    body {
+        margin: 0;
+    }
+    #header {
         display: flex;
         padding: 0.6rem 8rem;
-        background-color: #F49338;
+        background-color: var(--header);
     }
+
 
     h1 {
         inline-size: 3rem;
@@ -109,9 +146,9 @@
     .fa-solid {
         margin-left: -7rem;
         margin-top: -0.1rem;
-        
+       
     }
-    
+   
     .mobile-container a {
         display: block;
         padding: 0.2rem 0.5rem;
@@ -123,6 +160,7 @@
         text-align: right;
         font-size: 1.3rem;
         
+        
     }
     .mobile-container input[type="checkbox"], .mobile-container .fa-bars, .mobile-container .fa-times {
         position: absolute;
@@ -133,7 +171,9 @@
         top: -4rem;
         width: 3rem;
         height: 3rem;
+       
     }
+
 
     .mobile-container .fa-bars, .mobile-container .fa-times {
         font-size: 2rem;
@@ -145,12 +185,12 @@
     .mobile-container {
         color: black;
         position: relative;
-        background: white;
-       
+        background: var(--search);  
        
     }
     .mobile-container .myLinks {
         display: none;
+
 
     }
     .mobile-container input:checked ~ .myLinks {
@@ -163,6 +203,7 @@
         display: none;
     }
 
+
     .img {
         justify-content: center;
         align-content: center;
@@ -171,15 +212,34 @@
      .search-container {
         height: 5rem;
         background-image: url("../images/searchimg.jpeg");
+        background-size: 1300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     }
+   
+     .search-icon {
+        width: 0.8rem;
+        height: auto;
+        background-color: var(--search);
+     }
+     .search-input {
+        font-family: "Poppins", sans-serif;
+        background-color: var(--search);
+        margin-left: 1rem;
+        font-size: 1.2rem;
+        width: 40rem;
+        border-radius: 30px;
+        border: none;
+        padding-left: 1rem;
+       
      }
     .search-button {
         border-radius: 30px;
-        background-color: yellow;
-        font-family: "Poppins", sans-serif;
+        background-color: var(--search);
+        border: none;
+        height: 2rem;
+        width: 3rem;
+     
     }
-
 }
-    
-
-
-  
