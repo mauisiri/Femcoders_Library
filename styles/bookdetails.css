@@ -71,6 +71,11 @@
         display: none;
     }
     
+    .icon {
+        display: flex;   
+        background-color: #F49338;
+
+    }
 }
 
 /*.icon {
