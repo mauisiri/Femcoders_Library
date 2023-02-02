@@ -71,13 +71,23 @@
         display: none;
     }
     
+    .delete {
+        display: flex;  
+        justify-items:flex-end; 
+        align-items: center;
+
+    }
+    .icon {
+        
+        background-color: #F49338;
+        width: 3rem;
+
+    }
 }
 
-/*.icon {
-width: 2%;
-}*/
+@media screen and (min-width: 600px) {
 
-#header {
+.logo {
     display: flex;
     padding: 0.6rem 8rem;
     background-color: #F49338;
@@ -144,4 +154,5 @@ h1 {
 }
 .mobile-container input:not(:checked) ~ .fa-times {
     display: none;
+}
 }
