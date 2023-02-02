@@ -1,15 +1,13 @@
-.search-button{
-    background-color: violet;
-}
+
 
 @media (max-width: 576px) {
     body {
         margin: 0;
     }
-    .logo {
+    #header {
         display: flex;
         padding: 0.6rem 8rem;
-        background-color: red;
+        background-color: var(--header);
     }
 
     h1 {
@@ -57,7 +55,7 @@
     .mobile-container {
         color: black;
         position: relative;
-        background: white;
+        background: var(--search);
        
        
     }
@@ -83,21 +81,44 @@
      .search-container {
         height: 5rem;
         background-image: url("../images/searchimg.jpeg");
+        background-size: 500px; 
+        display: flex;
+        align-items: center;
+     }
+   
+     .search-icon {
+        width: 0.8rem;
+        height: auto;
+        background-color: var(--search);
+     }
+     .search-input {
+        font-family: "Poppins", sans-serif;
+        background-color: var(--search);
+        margin-left: 1rem;
+        font-size: 0.8rem;
+        width: 15rem;
+       
      }
     .search-button {
         border-radius: 30px;
-        background-color: red;
-        font-family: "Poppins", sans-serif;
+        background-color: var(--search);
+        border: none;
+        height: 2rem;
+        width: 3rem;
+      
     }
 }
 
 @media screen and (min-width: 600px) {
     
 
-    .logo {
+    body {
+        margin: 0;
+    }
+    #header {
         display: flex;
         padding: 0.6rem 8rem;
-        background-color: #F49338;
+        background-color: var(--header);
     }
 
     h1 {
@@ -145,8 +166,7 @@
     .mobile-container {
         color: black;
         position: relative;
-        background: white;
-       
+        background: var(--search);  
        
     }
     .mobile-container .myLinks {
@@ -171,15 +191,35 @@
      .search-container {
         height: 5rem;
         background-image: url("../images/searchimg.jpeg");
+        background-size: 1300px; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     }
+   
+     .search-icon {
+        width: 0.8rem;
+        height: auto;
+        background-color: var(--search);
+     }
+     .search-input {
+        font-family: "Poppins", sans-serif;
+        background-color: var(--search);
+        margin-left: 1rem;
+        font-size: 0.8rem;
+        width: 40rem;
+       
      }
     .search-button {
         border-radius: 30px;
-        background-color: yellow;
-        font-family: "Poppins", sans-serif;
+        background-color: var(--search);
+        border: none;
+        height: 2rem;
+        width: 3rem;
+      
     }
-
 }
-    
+
 
 
   
