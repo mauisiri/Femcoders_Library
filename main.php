@@ -49,7 +49,7 @@ if (mysqli_num_rows($result) > 0) {
 
     ?>
 <div class="container">
-  <?php echo '<a href="./detailbook.php?isbn='.$row["isbn"].'"> <img class="img" src="data:image/jpeg;base64,'.base64_encode( $row["img"]) .'" /></a></br>'?>
+  <?php echo '<a href="./bookdetails.php?isbn='.$row["isbn"].'"> <img class="img" src="data:image/jpeg;base64,'.base64_encode( $row["img"]) .'" /></a></br>'?>
   <?php echo $row['author']?>
   <?php echo $row['title']?>
   </div>
