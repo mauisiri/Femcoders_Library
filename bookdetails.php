@@ -33,7 +33,6 @@ if($stmt->execute()){
         echo 'Could not run query: ' . mysql_error();
         exit;
     }
-    //echo "No of records : ".$result->num_rows."<br>";
     $row=$result->fetch_object();
     echo "Author: " . $row->author. "Title: " . $row->title. "ISBN: " . $row->isbn. "Description: " . $row->description. "Book cover: " . "<br>";
     echo '<img src="data:image/jpeg;base64,'.base64_encode( $row->img) .'" />';
@@ -41,22 +40,17 @@ if($stmt->execute()){
 else{
     echo $connection->error;
 }
-/* $user = $stmt->get_result()->fetch_assoc();
-//$row = mysql_fetch_row($result);
-echo "<pre>";
-print_r($user);
-echo "</pre>"; */
-/* echo $row[0];
-echo "Author: " . $row["author"]. "Title: " . $row["title"]. "ISBN: " . $row["isbn"]. "Description: " . $row["description"]. "Book cover: " . "<br>";
-    echo '<img src="data:image/jpeg;base64,'.base64_encode( $row["img"]) .'" />';
- */
+
 mysqli_close($conn);
 ?>
+<div class="delete">
     <a href="updatebook.php?isbn=<?php echo $row->isbn ?> ">
         <img class = "icon" src="./images/pen-to-square-solid.svg" alt= "edit"/>
     </a>
+
     <a href="delete.php?isbn=<?php echo $row->isbn ?> ">
     <img class = "icon" src="./images/trash-can-solid.svg" alt= "delete"/></a>
+</div>
     <script src="https://kit.fontawesome.com/27198e3231.js" crossorigin="anonymous"></script>
 </body>
 </html>
