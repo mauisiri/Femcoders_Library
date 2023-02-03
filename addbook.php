@@ -11,7 +11,7 @@
 <div id="header">
         <i class="fa-solid fa-3x fa-book"></i>
         <h1>FemCoders Library</h1>
-    </div>
+</div>
     <div class="mobile-container">
         <input type="checkbox">
         <i class="fa fa-bars"></i>
@@ -20,10 +20,8 @@
           <a href="./main.php">Home</a>
           <a href="./addbook.php">Add Books</a>
         </div>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            </a>
-        </div>
-    </div>
+        
+</div>
     
     <form action="" method="post" enctype="multipart/form-data"><br>
         <label for="author">Author:</label>
@@ -71,35 +69,6 @@ if ($stmt->execute()) {
     echo "Unable to create record";
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
-
-
-/* $sql = "INSERT INTO books (author, title, isbn, description, img )VALUES('$author', '$title', '$isbn', '$description', '$bookcover')";
-if (mysqli_query($conn, $sql)) {
-    echo 'new record created succesfully';
-}  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-mysqli_close($conn); */
-
-
-
-//    if(isset($_POST['submit'])) 
-//    {
-//       echo("Author: " . $_POST['author'] . "<br />");
-//       echo("Title: " . $_POST['title'] . "<br />");
-//       echo ("ISBN: " . $_POST['isbn'] . "<br />");
-//       echo ("Description: " . $_POST['description'] . "<br />");
-   
-//    }
-
-//     $directorio = 'images/';
-
-//     $bookcover = $directorio . basename($_FILES['bookcover']['name']);
-//     move_uploaded_file($_FILES['bookcover']['tmp_name'], $bookcover);
-
-//     echo '<br/>';
-//     foreach ($_FILES as $arrayImagen) {
-//         print_r($arrayImagen);
-//         echo '<br/>';
-//     }
 
 $stmt->close();
 $conn->close();

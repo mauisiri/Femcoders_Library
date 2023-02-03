@@ -20,6 +20,6 @@ if(!empty($_FILES['bookcover']['tmp_name'])) {
 $query=mysqli_query($conn,$sql);
 
     if($query){
-        Header("Location: detailbook.php?isbn=$isbn");
+        Header("Location: bookdetails.php?isbn=$isbn");
     }
 ?>
