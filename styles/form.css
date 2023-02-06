@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@0,200;1,200;1,300&display=swap');
+
+@media (max-width: 576px) {
+    body {
+        margin: 0;
+        background-color: #F0EBE5;
+    }
+    #header {
+        display: flex;
+        padding: 0.6rem 8rem;
+        background-color: #F49338;
+    }
+
+    h1 {
+        inline-size: 3rem;
+        font-size: 1.3rem;
+        margin-top: -0.1rem;
+        margin-left: 0.7rem;
+        font-family: 'Abril+Fatface';
+    }
+    .fa-solid {
+        margin-left: -7rem;
+        margin-top: -0.1rem;
+        
+    }
+    
+    .mobile-container a {
+        display: block;
+        padding: 0.2rem 0.5rem;
+        text-decoration: none;
+        color: black;
+        text-shadow: 0.0625rem black;
+    }
+    .myLinks {
+        text-align: right;
+        font-size: 1.3rem;
+        
+    }
+    .mobile-container input[type="checkbox"], .mobile-container .fa-bars, .mobile-container .fa-times {
+        position: absolute;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        right: 0;
+        top: -4rem;
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .mobile-container .fa-bars, .mobile-container .fa-times {
+        font-size: 2rem;
+        pointer-events: none;
+    }
+    .mobile-container input[type="checkbox"] {
+        opacity: 0;
+    }
+    .mobile-container {
+        color: black;
+        position: relative;
+        background: white;
+       
+       
+    }
+    .mobile-container .myLinks {
+        display: none;
+
+    }
+    .mobile-container input:checked ~ .myLinks {
+        display: block;
+    }
+    .mobile-container input:checked ~ .fa-bars {
+        display: none;
+    }
+    .mobile-container input:not(:checked) ~ .fa-times {
+        display: none;
+    }
+    
+    form {
+        justify-content: center;
+        text-align: center;
+    }
+    label {
+        font-size: 1rem;
+        /*margin-left: 1rem;*/
+        margin-top: 1rem;
+        font-family: 'Poppins';
+    }
+
+    input {
+        border-radius: 1rem;
+        padding: 0.4rem 0.5rem;
+        font-size: 1rem;
+        border: none;
+    }
+    textarea {
+        font-size: 1rem;
+        border-radius: 1rem;
+        margin-left: 1.8rem;
+    }
+    .button {
+        background-color: #EFC6A1;
+        /*margin-left: 6rem;*/
+        padding: 0.4rem 2rem;
+        border: none;
+    }
+    .file {
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 600px) {
+.logo {
+    display: flex;
+    padding: 0.6rem 8rem;
+    background-color: red;
+}
+
+h1 {
+    inline-size: 3rem;
+    font-size: 1.3rem;
+    margin-top: -0.1rem;
+    margin-left: 0.7rem;
+    font-family: 'Abril+Fatface';
+}
+.fa-solid {
+    margin-left: -7rem;
+    margin-top: -0.1rem;
+    
+}
+
+.mobile-container a {
+    display: block;
+    padding: 0.2rem 0.5rem;
+    text-decoration: none;
+    color: black;
+    text-shadow: 0.0625rem black;
+}
+.myLinks {
+    text-align: right;
+    font-size: 1.3rem;
+    
+}
+.mobile-container input[type="checkbox"], .mobile-container .fa-bars, .mobile-container .fa-times {
+    position: absolute;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    right: 0;
+    top: -4rem;
+    width: 3rem;
+    height: 3rem;
+}
+
+.mobile-container .fa-bars, .mobile-container .fa-times {
+    font-size: 2rem;
+    pointer-events: none;
+}
+.mobile-container input[type="checkbox"] {
+    opacity: 0;
+}
+.mobile-container {
+    color: black;
+    position: relative;
+    background: white;
+   
+   
+}
+.mobile-container .myLinks {
+    display: none;
+
+}
+.mobile-container input:checked ~ .myLinks {
+    display: block;
+}
+.mobile-container input:checked ~ .fa-bars {
+    display: none;
+}
+.mobile-container input:not(:checked) ~ .fa-times {
+    display: none;
+}
+
+form {
+    justify-content: center;
+    text-align: center;
+}
+label {
+    font-size: 1rem;
+    /*margin-left: 1rem;*/
+    margin-top: 1rem;
+    font-family: 'Poppins';
+}
+
+input {
+    border-radius: 2rem;
+    padding: 0.4rem 0.5rem;
+    font-size: 1rem;
+    border: none;
+}
+textarea {
+    font-size: 1rem;
+    border-radius: 1rem;
+    margin-left: 1.8rem;
+    
+}
+.button {
+    background-color: red;
+    /*margin-left: 6rem;*/
+    padding: 0.4rem 2rem;
+    border: none;
+}
+.file {
+    padding: 0;
+}
+}
