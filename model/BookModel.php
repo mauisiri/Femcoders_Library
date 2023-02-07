@@ -10,10 +10,10 @@ class BookModel
         //require_once("/opt/lampp/htdocs/Femcoders_Library/config/Database.php");
 
         //Mac connection
-        require_once("/Applications/MAMP/htdocs/Femcoders_Library/config/Database.php");
+        //require_once("/Applications/MAMP/htdocs/Femcoders_Library/config/Database.php");
 
         //Windows connection
-        //require_once("C:/xampp/htdocs/Femcoders_Library/config/Database.php");
+        require_once("C:/xampp/htdocs/Femcoders_Library/config/Database.php");
         
         $db = new Database();
         $this->conn = $db->connection();
@@ -26,5 +26,5 @@ class BookModel
     }
 }
 
-$connection = new BookModel();
-print_r($connection->getBooks());
+// $connection = new BookModel();
+// print_r($connection->getBooks());

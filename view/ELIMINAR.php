@@ -19,14 +19,18 @@ $result = $controller->getMembers();
 <body>
     <h2>Socias</h2>
     <?php if($result) :?>
-        <?php foreach($result as $socia) :?>
+        <?php foreach($result as $book) :?>
             <ul>
-                <li>id:<?= $socia['id']?></li>
-                <li>nombre:<?= $socia['nombre']?></li>
-            </ul>
+               <li>Title:<?= $book['title']?></li>
+                <li>Author:<?= $book['author']?></li>
+                </ul>
+                <div> <?php echo '<a href="./bookdetails.php?isbn='.$book["isbn"].'"> <img class="img" src="data:image/jpeg;base64,'.base64_encode( $book["img"]) .'" /></a></br>'?>
+                </div>
+
+            
         <?php endforeach; ?>
         <?php else :?>
-            <h3>No hay miembros</h3>
+            <h3>No hay </h3>
     <?php endif; ?>
 
 </body>
