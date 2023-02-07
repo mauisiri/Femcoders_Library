@@ -24,6 +24,12 @@ class BookModel
         $query = $this->conn->query('SELECT * FROM books');
         return $query->fetch_all(MYSQLI_ASSOC);
     }
+
+    public function deleteBooks()
+    {
+        $isbn = $_GET['isbn'];
+        $query =$this->conn->query("DELETE FROM books WHERE isbn=?");
+    }
 }
 
 // $connection = new BookModel();
