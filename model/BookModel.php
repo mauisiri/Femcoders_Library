@@ -5,10 +5,14 @@ class BookModel
     public $conn;
 
     public function __construct()
-    {  //conexion para linux
-        // require_once("/opt/lampp/htdocs/Femcoders_Library/config/Database.php");
+    {   
+        //Linux connection
+        //require_once("/opt/lampp/htdocs/Femcoders_Library/config/Database.php");
 
-        //conexion windows
+        //Mac connection
+        //require_once("/Applications/MAMP/htdocs/Femcoders_Library/config/Database.php");
+
+        //Windows connection
         require_once("C:/xampp/htdocs/Femcoders_Library/config/Database.php");
         
         $db = new Database();
@@ -20,7 +24,13 @@ class BookModel
         $query = $this->conn->query('SELECT * FROM books');
         return $query->fetch_all(MYSQLI_ASSOC);
     }
+
+    public function deleteBooks()
+    {
+        $isbn = $_GET['isbn'];
+        $query =$this->conn->query("DELETE FROM books WHERE isbn=?");
+    }
 }
 
-$connection = new BookModel();
-print_r($connection->getBooks());
+// $connection = new BookModel();
+// print_r($connection->getBooks());

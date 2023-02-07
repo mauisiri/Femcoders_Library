@@ -1,9 +1,27 @@
+<?php
+
+        //Linux connection
+        //require_once("/opt/lampp/htdocs/Femcoders_Library/controller/BookController.php");
+
+        //Mac connection
+        //require_once("/Applications/MAMP/htdocs/Femcoders_Library/controller/BookController.php");
+
+        //Windows connection
+        require_once("C:/xampp/htdocs/Femcoders_Library/controller/BookController.php");
+
+$controller = new BookController();
+$result = $controller->getBooks();
+//var_dump($result);
+
+?>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="../styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>FemCoders Library</title>
 </head>
@@ -29,35 +47,25 @@
   </form>
 </div>
 
+<?php if($result) :?>
+        <?php foreach($result as $book) :?>
+            <ul>
+               <li>Title:<?= $book['title']?></li>
+                <li>Author:<?= $book['author']?></li>
+                </ul>
+                <div> <?php echo '<a href="./bookdetails.php?isbn='.$book["isbn"].'"> <img class="img" src="data:image/jpeg;base64,'.base64_encode( $book["img"]) .'" /></a></br>'?>
+                </div>
 
-    <?php
-include("connection.php");
+            
+        <?php endforeach; ?>
+        <?php else :?>
+            <h3>No hay libro</h3>
+    <?php endif; ?>
 
-
-
-$sql = "SELECT isbn, author, title, img FROM books";
-$result = mysqli_query($conn, $sql);
-
-if (mysqli_num_rows($result) > 0) {
-  
-  while($row = mysqli_fetch_assoc($result)) {
-    ?>
-<div class="container">
-  <?php echo '<a href="./bookdetails.php?isbn='.$row["isbn"].'"> <img class="img" src="data:image/jpeg;base64,'.base64_encode( $row["img"]) .'" /></a></br>'?>
-  <?php echo $row['author']?>
-  <?php echo $row['title']?>
-  </div>
-
-<?php
-  }
-} else {
-  echo "0 results";
-}
-
-mysqli_close($conn);
-?>
 
 <script src="https://kit.fontawesome.com/27198e3231.js" crossorigin="anonymous"></script>
 </body>
 </html>
+
+
 
