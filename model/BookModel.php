@@ -5,11 +5,15 @@ class BookModel
     public $conn;
 
     public function __construct()
-    {  //conexion para linux
-        // require_once("/opt/lampp/htdocs/Femcoders_Library/config/Database.php");
+    {   
+        //Linux connection
+        //require_once("/opt/lampp/htdocs/Femcoders_Library/config/Database.php");
 
-        //conexion windows
-        require_once("C:/xampp/htdocs/Femcoders_Library/config/Database.php");
+        //Mac connection
+        require_once("/Applications/MAMP/htdocs/Femcoders_Library/config/Database.php");
+
+        //Windows connection
+        //require_once("C:/xampp/htdocs/Femcoders_Library/config/Database.php");
         
         $db = new Database();
         $this->conn = $db->connection();

@@ -1,3 +1,21 @@
+<?php
+
+        //Linux connection
+        //require_once("/opt/lampp/htdocs/Femcoders_Library/controller/BookController.php");
+
+        //Mac connection
+        require_once("/Applications/MAMP/htdocs/Femcoders_Library/controller/BookController.php");
+
+        //Windows connection
+        //require_once("C:/xampp/htdocs/Femcoders_Library/controller/BookController.php");
+
+$controller = new MemberController();
+$result = $controller->getMembers();
+var_dump($result);
+
+?>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -60,4 +78,6 @@ mysqli_close($conn);
 <script src="https://kit.fontawesome.com/27198e3231.js" crossorigin="anonymous"></script>
 </body>
 </html>
+
+
 
