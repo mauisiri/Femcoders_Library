@@ -3,8 +3,8 @@ class Database {
 
       private $servername = "localhost";
       private $username = "root";
-      //private $password = "";
-      private $password = "root";
+      private $password = "";
+      // private $password = "root";
       private $dbname = "femcoders_library";
 
       public function connection()

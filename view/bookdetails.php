@@ -1,3 +1,20 @@
+<?php
+
+        //Linux connection
+        //require_once("/opt/lampp/htdocs/Femcoders_Library/controller/BookController.php");
+
+        //Mac connection
+        //require_once("/Applications/MAMP/htdocs/Femcoders_Library/controller/BookController.php");
+
+        //Windows connection
+        require_once("C:/xampp/htdocs/Femcoders_Library/controller/BookController.php");
+
+$controller = new BookController();
+$result = $controller->getBooks();
+//var_dump($result);
+?>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -22,10 +39,9 @@
 </div>
     </div>
 <?php
- include("connection.php");
+
 $getIsbn = $_GET['isbn'];
 $sql = "SELECT isbn, author, title, description, img FROM books where isbn=?";
-$stmt= $conn->prepare($sql);
 $stmt->bind_param("s", $getIsbn);
 if($stmt->execute()){
     $result = $stmt->get_result();
