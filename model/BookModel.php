@@ -26,9 +26,9 @@ class BookModel
     }
 
     public function getAbook($isbn){
-        $query = $this->conn->prepare("SELECT * FROM books where isbn = ? ");
-        $query->bind_param("i",$isbn);
-        return ($query->execute()) ? $query->fetch() : false ;
+        $query = $this->conn->query("SELECT * FROM books WHERE isbn = $isbn");
+        // $query->bind_param( string, $isbn);
+        return  $query;
     }
 
 
