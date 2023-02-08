@@ -1,13 +1,13 @@
 <?php
 
         //Linux connection
-        require_once("/opt/lampp/htdocs/Femcoders_Library/controller/BookController.php");
+        //require_once("/opt/lampp/htdocs/Femcoders_Library/controller/BookController.php");
 
         //Mac connection
         //require_once("/Applications/MAMP/htdocs/Femcoders_Library/controller/BookController.php");
 
         //Windows connection
-        //require_once("C:/xampp/htdocs/Femcoders_Library/controller/BookController.php");
+        require_once("C:/xampp/htdocs/Femcoders_Library/controller/BookController.php");
 
 $controller = new BookController();
 $result = $controller->getAbook($_GET['isbn']);
@@ -34,12 +34,12 @@ var_dump($result);
         <i class="fa fa-bars"></i>
         <i class="fa fa-times"></i>
         <div class="myLinks">
-          <a href="../index.php">Home</a>
-          <a href="./addbook.php">Add Books</a>
+        <a href="../index.php">Home</a>
+        <a href="./addbook.php">Add Books</a>
 </div>
     </div>
 <?php
-echo $result['isbn']; 
+echo $result->title; 
 // $getIsbn = $_GET['isbn'];
 // $sql = "SELECT isbn, author, title, description, img FROM books where isbn=?";
 // $stmt->bind_param("s", $getIsbn);
