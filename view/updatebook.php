@@ -27,7 +27,7 @@ $row=mysqli_fetch_array($query);
         <i class="fa fa-bars"></i>
         <i class="fa fa-times"></i>
         <div class="myLinks">
-          <a href="./main.php">Home</a>
+          <a href="./index.php">Home</a>
           <a href="./addbook.php">Add Books</a>
         </div>
     </div>
