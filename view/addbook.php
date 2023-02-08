@@ -1,3 +1,19 @@
+<?php
+
+        //Linux connection
+       // require_once("/opt/lampp/htdocs/Femcoders_Library/controller/BookController.php");
+
+        //Mac connection
+        //require_once("/Applications/MAMP/htdocs/Femcoders_Library/controller/BookController.php");
+
+        //Windows connection
+        require_once("C:/xampp/htdocs/Femcoders_Library/controller/BookController.php");
+
+$controller = new BookController();
+$result = $controller->getBooks();
+//var_dump($result);
+
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -49,7 +65,7 @@
 
 if ($_POST)
 {
-include("connection.php");
+// include("connection.php");
 
 $author = $_POST['author'];
 $title = $_POST['title'];
@@ -59,19 +75,19 @@ $bookcover = file_get_contents($_FILES['bookcover']['tmp_name']);
 
 $sql = "INSERT INTO books (author, title, isbn, description, img) VALUES (?,?,?,?,?)";
 
-$stmt= $conn->prepare($sql);
+// // $stmt= $conn->prepare($sql);
 
-$stmt->bind_param("sssss", $author, $title, $isbn, $description, $bookcover);
+// $stmt->bind_param("sssss", $author, $title, $isbn, $description, $bookcover);
 
-if ($stmt->execute()) {
-    echo "New record created successfully";
-   } else {
-    echo "Unable to create record";
-    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-}
+// if ($stmt->execute()) {
+//     echo "New record created successfully";
+//    } else {
+//     echo "Unable to create record";
+//     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+// }
 
-$stmt->close();
-$conn->close();
+// $stmt->close();
+// $conn->close();
 }
 ?>
 <script src="https://kit.fontawesome.com/27198e3231.js" crossorigin="anonymous"></script>
