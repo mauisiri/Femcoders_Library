@@ -17,8 +17,8 @@
         <i class="fa fa-bars"></i>
         <i class="fa fa-times"></i>
         <div class="myLinks">
-          <a href="./main.php">Home</a>
-          <a href="./addbook.php">Add Books</a>
+        <a href="/Femcoders_Library/">Home</a>
+        <a href="./view/addbook.php">Add Books</a>
         </div>
         
 </div>
@@ -42,7 +42,6 @@
         
         <input class="button" type= "submit" id ="submit" name="submit" value="SUBMIT" />
     </form>
-   
 
 
 <?php
