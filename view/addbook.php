@@ -33,8 +33,8 @@ $result = $controller->getBooks();
         <i class="fa fa-bars"></i>
         <i class="fa fa-times"></i>
         <div class="myLinks">
-          <a href="./main.php">Home</a>
-          <a href="./addbook.php">Add Books</a>
+        <a href="./main.php">Home</a>
+        <a href="./addbook.php">Add Books</a>
         </div>
         
 </div>
@@ -42,13 +42,13 @@ $result = $controller->getBooks();
     <form action="" method="post" enctype="multipart/form-data"><br>
         <label for="author">Author:</label>
         <input type="text" name="author" required/> <br><br>
-           
+
         <label for="title">Title:</label>
         <input type="text" name="title" required/><br><br>
-           
+        
         <label for="isbn">ISBN:</label>
         <input type="text" name="isbn" required/><br><br>
-           
+        
         <label for="description">Description:</label>
         <textarea name="description" rows="10" cols="25"></textarea>
         <div class="file">
