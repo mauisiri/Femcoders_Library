@@ -1,6 +1,6 @@
 <?php
 
-include("connection.php");
+include("Database.php");
 
 $isbn=$_POST['isbn'];
 $author=$_POST['author'];

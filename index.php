@@ -1,13 +1,13 @@
 <?php
 
         //Linux connection
-        //require_once("/opt/lampp/htdocs/Femcoders_Library/controller/BookController.php");
+        require_once("/opt/lampp/htdocs/Femcoders_Library/controller/BookController.php");
 
         //Mac connection
         //require_once("/Applications/MAMP/htdocs/Femcoders_Library/controller/BookController.php");
 
         //Windows connection
-        require_once("C:/xampp/htdocs/Femcoders_Library/controller/BookController.php");
+       // require_once("C:/xampp/htdocs/Femcoders_Library/controller/BookController.php");
 
 $controller = new BookController();
 $result = $controller->getBooks();
@@ -50,10 +50,10 @@ $result = $controller->getBooks();
 <?php if($result) :?>
         <?php foreach($result as $book) :?>
             <ul>
-               <li>Title:<?= $book['title']?></li>
+                <li>Title:<?= $book['title']?></li>
                 <li>Author:<?= $book['author']?></li>
                 </ul>
-                <div> <?php echo '<a href="./bookdetails.php?isbn='.$book["isbn"].'"> <img class="img" src="data:image/jpeg;base64,'.base64_encode( $book["img"]) .'" /></a></br>'?>
+                <div> <?php echo '<a href="./view/bookdetails.php?isbn='.$book["isbn"].'"> <img class="img" src="data:image/jpeg;base64,'.base64_encode( $book["img"]) .'" /></a></br>'?>
                 </div>
 
             
