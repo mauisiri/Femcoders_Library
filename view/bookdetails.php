@@ -1,13 +1,13 @@
 <?php
 
         //Linux connection
-        require_once("/opt/lampp/htdocs/Femcoders_Library/controller/BookController.php");
+        //require_once("/opt/lampp/htdocs/Femcoders_Library/controller/BookController.php");
 
         //Mac connection
         //require_once("/Applications/MAMP/htdocs/Femcoders_Library/controller/BookController.php");
 
         //Windows connection
-        //require_once("C:/xampp/htdocs/Femcoders_Library/controller/BookController.php");
+        require_once("C:/xampp/htdocs/Femcoders_Library/controller/BookController.php");
 
 $controller = new BookController();
 $result = $controller->getAbook($_GET['isbn']);
@@ -49,7 +49,7 @@ $result = $controller->getAbook($_GET['isbn']);
         <img class = "icon" src="../images/pen-to-square-solid.svg" alt= "edit"/>
     </a>
 
-    <a href="delete.php?isbn=<?php echo $result['isbn'] ?> ">
+    <a href="/controller/delete.php?isbn=<?php echo $result['isbn'] ?> ">
     <img class = "icon" src="../images/trash-can-solid.svg" alt= "delete"/></a>
 </div>
     <script src="https://kit.fontawesome.com/27198e3231.js" crossorigin="anonymous"></script>

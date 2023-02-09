@@ -2,12 +2,12 @@
     body {
         margin: 0;
     }
+
     #header {
         display: flex;
         padding: 0.6rem 8rem;
         background-color: var(--header);
     }
-
 
     h1 {
         inline-size: 3rem;
@@ -18,9 +18,9 @@
     .fa-solid {
         margin-left: -7rem;
         margin-top: -0.1rem;
-       
+    
     }
-   
+
     .mobile-container a {
         display: block;
         padding: 0.2rem 0.5rem;
@@ -28,11 +28,13 @@
         color: black;
         text-shadow: 0.0625rem black;
     }
+
     .myLinks {
         text-align: right;
         font-size: 1.3rem;
        
     }
+    
     .mobile-container input[type="checkbox"], .mobile-container .fa-bars, .mobile-container .fa-times {
         position: absolute;
         box-sizing: border-box;

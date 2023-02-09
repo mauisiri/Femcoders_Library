@@ -1,12 +1,19 @@
 <?php 
-    include("connection.php");
+    //Linux connection
+        //require_once("/opt/lampp/htdocs/Femcoders_Library/controller/BookController.php");
 
-$isbn=$_GET['isbn'];
+        //Mac connection
+        //require_once("/Applications/MAMP/htdocs/Femcoders_Library/controller/BookController.php");
 
-$sql="SELECT * FROM books WHERE isbn='$isbn'";
-$query=mysqli_query($conn,$sql);
+        //Windows connection
+        require_once("C:/xampp/htdocs/Femcoders_Library/controller/BookController.php");
 
-$row=mysqli_fetch_array($query);
+//$isbn=$_GET['isbn'];
+
+// $sql="SELECT * FROM books WHERE isbn='$isbn'";
+// $query=mysqli_query($conn,$sql);
+
+// $row=mysqli_fetch_array($query);
 ?>
 <html lang="en">
 <head>
@@ -27,20 +34,20 @@ $row=mysqli_fetch_array($query);
         <i class="fa fa-bars"></i>
         <i class="fa fa-times"></i>
         <div class="myLinks">
-          <a href="./main.php">Home</a>
-          <a href="./addbook.php">Add Books</a>
+        <a href="/Femcoders_Library/">Home</a>
+        <a href="./view/addbook.php">Add Books</a>
         </div>
     </div>
     <form action="edit.php" method="post" enctype="multipart/form-data"><br>
         <label for="author">Author:</label>
-        <input type="text" name="author" value= "<?php echo $row['author']?>" required/> <br><br>
-           
+        <input type="text" name="author" value= "<?php echo $book['author']?>" required/> <br><br>
+        
         <label for="title">Title:</label>
-        <input type="text" name="title" value= "<?php echo $row['title']?>"required/> <br><br>
-           
+        <input type="text" name="title" value= "<?php echo $book['title']?>"required/> <br><br>
+        
         <label for="isbn">ISBN:</label>
-        <input type="text" name="isbn" value= "<?php echo $row['isbn']?>"required/> <br><br>
-           
+        <input type="text" name="isbn" value= "<?php echo $book['isbn']?>"required/> <br><br>
+        
         <label for="description">Description:</label>
         <textarea name="description" rows="10" cols="25" required> <?php echo $row['description']?></textarea>
         <div class="file">
