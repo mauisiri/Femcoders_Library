@@ -35,7 +35,7 @@ $result = $controller->getAbook($_GET['isbn']);
         <i class="fa fa-times"></i>
         <div class="myLinks">
         <a href="../index.php">Home</a>
-        <a href="./addbook.php">Add Books</a>
+        <a href="addbook.php">Add Books</a>
 </div>
     </div>
 <?= $result['title']?>

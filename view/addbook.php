@@ -34,7 +34,7 @@ $result = $controller->getBooks();
         <i class="fa fa-times"></i>
         <div class="myLinks">
         <a href="/Femcoders_Library/">Home</a>
-        <a href="./view/addbook.php">Add Books</a>
+        <a href="addbook.php">Add Books</a>
         </div>
         
 </div>
