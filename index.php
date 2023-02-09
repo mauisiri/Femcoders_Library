@@ -8,7 +8,7 @@
         require_once("/Applications/MAMP/htdocs/Femcoders_Library/controller/BookController.php");
 
         //Windows connection
-       // require_once("C:/xampp/htdocs/Femcoders_Library/controller/BookController.php");
+        //require_once("C:/xampp/htdocs/Femcoders_Library/controller/BookController.php");
 
 $controller = new BookController();
 $result = $controller->getBooks();

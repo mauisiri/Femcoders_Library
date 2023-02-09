@@ -8,7 +8,7 @@ class BookController
         //Linux connection
           //  require_once("/opt/lampp/htdocs/Femcoders_Library/model/BookModel.php");
         //Mac connection
-            require_once("/Applications/MAMP/htdocs/Femcoders_Library/model/BookModel.php");
+           // require_once("/Applications/MAMP/htdocs/Femcoders_Library/model/BookModel.php");
         //Windows connection
             require_once("C:/xampp/htdocs/Femcoders_Library/model/BookModel.php");
         $this->model = new BookModel(); 
