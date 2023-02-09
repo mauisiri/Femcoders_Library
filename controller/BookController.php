@@ -6,11 +6,11 @@ class BookController
     public function __construct()
     {
         //Linux connection
-          //  require_once("/opt/lampp/htdocs/Femcoders_Library/model/BookModel.php");
+            require_once("/opt/lampp/htdocs/Femcoders_Library/model/BookModel.php");
         //Mac connection
            // require_once("/Applications/MAMP/htdocs/Femcoders_Library/model/BookModel.php");
         //Windows connection
-            require_once("C:/xampp/htdocs/Femcoders_Library/model/BookModel.php");
+            //require_once("C:/xampp/htdocs/Femcoders_Library/model/BookModel.php");
         $this->model = new BookModel(); 
     }
 
@@ -20,8 +20,14 @@ class BookController
     }
 
     public function getAbook($isbn){
-        return ($this->model->getAbook($isbn) != false) ? $this->model->getAbook($isbn) : header("Location:index.php");
-}
+        return  $this->model->getAbook($isbn);
+    }
+
+
+    public function updateBook($isbn, $title, $author, $description){
+        return ($this->model->updateBook($isbn, $title, $author, $description) != false) ? header("Location:bookdetails.php?isbn=$isbn") : header("Location:bookdetails.php?isbn=$isbn");
+    }
+
 }
 // $controller = new BookController;
 // var_dump($controller->getAbook(525562443));
