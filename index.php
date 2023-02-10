@@ -2,7 +2,6 @@
 
         //Linux connection
         //require_once("/opt/lampp/htdocs/Femcoders_Library/controller/BookController.php");
-        //require_once("/opt/lampp/htdocs/Femcoders_Library/controller/BookController.php");
 
         //Mac connection
         require_once("/Applications/MAMP/htdocs/Femcoders_Library/controller/BookController.php");
@@ -22,7 +21,7 @@ $result = $controller->getBooks();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>FemCoders Library</title>
 </head>

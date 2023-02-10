@@ -3,24 +3,23 @@
         //require_once("/opt/lampp/htdocs/Femcoders_Library/controller/BookController.php");
 
         //Mac connection
-        //require_once("/Applications/MAMP/htdocs/Femcoders_Library/controller/BookController.php");
+        require_once("/Applications/MAMP/htdocs/Femcoders_Library/controller/BookController.php");
 
         //Windows connection
-        require_once("C:/xampp/htdocs/Femcoders_Library/controller/BookController.php");
+        //require_once("C:/xampp/htdocs/Femcoders_Library/controller/BookController.php");
+$controller = new BookController();
+$book = $controller->getAbook($_GET['isbn']);
 
-//$isbn=$_GET['isbn'];
+       
 
-// $sql="SELECT * FROM books WHERE isbn='$isbn'";
-// $query=mysqli_query($conn,$sql);
 
-// $row=mysqli_fetch_array($query);
 ?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/form.css">
+    <link rel="stylesheet" href="../styles/form.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>FemCoders Library</title>
 </head>
@@ -38,7 +37,7 @@
         <a href="./view/addbook.php">Add Books</a>
         </div>
     </div>
-    <form action="edit.php" method="post" enctype="multipart/form-data"><br>
+    <form action="update.php" method="post" enctype="multipart/form-data"><br>
         <label for="author">Author:</label>
         <input type="text" name="author" value= "<?php echo $book['author']?>" required/> <br><br>
         
@@ -49,7 +48,7 @@
         <input type="text" name="isbn" value= "<?php echo $book['isbn']?>"required/> <br><br>
         
         <label for="description">Description:</label>
-        <textarea name="description" rows="10" cols="25" required> <?php echo $row['description']?></textarea>
+        <textarea name="description" rows="10" cols="25" required> <?php echo $book['description']?></textarea>
         <div class="file">
             <label for ="bookcover">Book cover:</label><br>
             <input type="file" key="bookcover" name="bookcover" id="bookcover"/> <br><br>
