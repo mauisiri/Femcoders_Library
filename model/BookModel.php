@@ -7,7 +7,7 @@ class BookModel
     public function __construct()
     {   
         //Linux connection
-        //require_once("/opt/lampp/htdocs/Femcoders_Library/config/Database.php");
+        require_once("/opt/lampp/htdocs/Femcoders_Library/config/Database.php");
 
         //Mac connection
         require_once("/Applications/MAMP/htdocs/Femcoders_Library/config/Database.php");
@@ -26,14 +26,16 @@ class BookModel
     }
 
     public function getAbook($isbn){
-        $query = $this->conn->query("INSERT INTO * FROM books WHERE isbn = '$isbn'");
-        
-        return  ($query->execute()) ? $this->conn->AÑADIRALGO() : false;
+        $query = $this->conn->query("SELECT * FROM books WHERE isbn = '$isbn'");
+        return  $query->fetch_assoc();
     }
 
-    public function addAbook($isbn, $author, $title, $img){
-        $query = $this->conn->query("INSERT INTO Books VALUES ($isbn, $author, $title, $img)" 
+    public function updateBook($isbn, $title, $author, $description){
+        $query = $this->conn->query("UPDATE books SET title='$title', author='$author',description='$description' WHERE isbn='$isbn'");
+       
     }
+
+
 
 
 
