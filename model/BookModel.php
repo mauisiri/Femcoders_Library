@@ -10,10 +10,10 @@ class BookModel
         //require_once("/opt/lampp/htdocs/Femcoders_Library/config/Database.php");
 
         //Mac connection
-        //require_once("/Applications/MAMP/htdocs/Femcoders_Library/config/Database.php");
+        require_once("/Applications/MAMP/htdocs/Femcoders_Library/config/Database.php");
 
         //Windows connection
-        require_once("C:/xampp/htdocs/Femcoders_Library/config/Database.php");
+        //require_once("C:/xampp/htdocs/Femcoders_Library/config/Database.php");
         
         $db = new Database();
         $this->conn = $db->connection();
@@ -26,10 +26,15 @@ class BookModel
     }
 
     public function getAbook($isbn){
-        $query = $this->conn->query("SELECT * FROM books WHERE isbn = '$isbn'");
-        // $query->bind_param( string, $isbn);
-        return  $query->fetch_assoc();
+        $query = $this->conn->query("INSERT INTO * FROM books WHERE isbn = '$isbn'");
+        
+        return  ($query->execute()) ? $this->conn->AÑADIRALGO() : false;
     }
+
+    public function addAbook($isbn, $author, $title, $img){
+        $query = $this->conn->query("INSERT INTO Books VALUES ($isbn, $author, $title, $img)" 
+    }
+
 
 
     // public function deleteBooks()
@@ -41,3 +46,11 @@ class BookModel
 
 // $connection = new BookModel();
 // var_dump($connection->getAbook(525562443));
+
+
+include("Database.php");
+
+$isbn=$_POST['isbn'];
+$author=$_POST['author'];
+$title=$_POST['title'];
+$description = $_POST['description'];
