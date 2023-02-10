@@ -30,20 +30,18 @@ class BookModel
         $query = $this->conn->query("SELECT * FROM books WHERE isbn = '$isbn'");
         return  $query->fetch_assoc();
     }
-
-    public function addAbook($isbn, $author, $title, $description, $img)
-    {
-         $query = $this->conn->query("INSERT INTO books VALUES ($isbn, $author, $title, $description, $img");
-    }
     
     public function updateBook($isbn, $title, $author, $description)
     {
-        $query = $this->conn->query("UPDATE books SET title='$title', author='$author',description='$description' WHERE isbn='$isbn'");
-       
+        $query = $this->conn->query("UPDATE books SET title='$title', author='$author',description='$description' WHERE isbn='$isbn'"); 
     }
+    
+    public function addBook($isbn, $author, $title, $description, $img)
+    {
+        $query = $this->conn->query("INSERT INTO books (author,title,isbn,description,img) VALUES('$isbn', '$author', '$title', '$description', '$img')");
 
-
-
+        return $query;
+    }
 
 
     // public function deleteBooks()

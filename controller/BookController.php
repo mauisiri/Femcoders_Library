@@ -28,6 +28,10 @@ class BookController
         return ($this->model->updateBook($isbn, $title, $author, $description) != false) ? header("Location:bookdetails.php?isbn=$isbn") : header("Location:bookdetails.php?isbn=$isbn");
     }
 
+    public function addBook($isbn, $title, $author, $description, $img){
+        return ($this->model->addBook($isbn, $title, $author, $description, $img) != false) ? header("Location:index.php") : header("Location:index.php");
+    }
+
 }
 // $controller = new BookController;
 // var_dump($controller->getAbook(525562443));
