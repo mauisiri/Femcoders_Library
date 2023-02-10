@@ -7,7 +7,7 @@ class BookModel
     public function __construct()
     {   
         //Linux connection
-        require_once("/opt/lampp/htdocs/Femcoders_Library/config/Database.php");
+        //require_once("/opt/lampp/htdocs/Femcoders_Library/config/Database.php");
 
         //Mac connection
         require_once("/Applications/MAMP/htdocs/Femcoders_Library/config/Database.php");
@@ -50,9 +50,3 @@ class BookModel
 // var_dump($connection->getAbook(525562443));
 
 
-include("Database.php");
-
-$isbn=$_POST['isbn'];
-$author=$_POST['author'];
-$title=$_POST['title'];
-$description = $_POST['description'];
